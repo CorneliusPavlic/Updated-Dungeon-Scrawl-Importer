@@ -1,3 +1,5 @@
+This is a direct copy of the original updated for Foundry 14, as such I'm going to leave his read me and links as is. Feel free to support him 
+
 ![Latest version](https://img.shields.io/github/v/tag/kid2407/DungeonScrawlImporter?label=Latest%20Version&sort=semver)
 ![Latest Release Download Count](https://img.shields.io/github/downloads/kid2407/DungeonScrawlImporter/latest/module.zip?label=Downloads(latest))
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fdungeon-scrawl-importer&colorB=4aa94a)
