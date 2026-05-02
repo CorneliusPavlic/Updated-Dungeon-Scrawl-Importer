@@ -45,7 +45,7 @@ export class DungeonScrawlImporterFormApplication extends FormApplication {
         let wallData          = []
         // noinspection JSValidateTypes
         let currentScene      = game.scenes.current || canvas.scene
-        const sceneDimensions = currentScene.dimensions
+        const sceneDimensions = canvas.dimensions
         const sceneCellSize   = currentScene.grid?.size || sceneDimensions.size
         const gridFactor      = sceneCellSize / gridCellSize
         for (let k in shapes) {
@@ -234,8 +234,8 @@ export class DungeonScrawlImporterFormApplication extends FormApplication {
             lightConfig = data.config
 
             let light = {
-                x:      data.transform[4] * (currentScene.grid?.size / gridCellSize || currentScene.dimensions.size / gridCellSize) + offsetData.xOffset,
-                y:      data.transform[5] * (currentScene.grid?.size / gridCellSize || currentScene.dimensions.size / gridCellSize) + offsetData.yOffset,
+                x:      data.transform[4] * (currentScene.grid?.size / gridCellSize || canvas.dimensions.size / gridCellSize) + offsetData.xOffset,
+                y:      data.transform[5] * (currentScene.grid?.size / gridCellSize || canvas.dimensions.size / gridCellSize) + offsetData.yOffset,
                 config: {
                     alpha:      data.alpha,
                     bright:     lightConfig[lightType].radius,
