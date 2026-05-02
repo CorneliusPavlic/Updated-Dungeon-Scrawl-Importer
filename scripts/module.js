@@ -27,19 +27,13 @@ Hooks.on('renderSceneDirectory', async function (app, element, context) {
         
         // console.log("DSI: Button HTML created");
         
-        // In ApplicationV2, element is an HTMLElement, not jQuery
+        // In V11/V12 element is jQuery. In V13+ (ApplicationV2) element is an HTMLElement.
+        const htmlElement = element[0] || element;
+        
         // Find the header
-        let header = element.querySelector('header.directory-header');
-        
-        if (!header) {
-            // console.log("DSI: header.directory-header not found, trying alternatives");
-            header = element.querySelector('header');
-        }
-        
-        if (!header) {
-            // console.log("DSI: No header found, trying .directory-header class");
-            header = element.querySelector('.directory-header');
-        }
+        let header = htmlElement.querySelector('header.directory-header') || 
+                     htmlElement.querySelector('header') || 
+                     htmlElement.querySelector('.directory-header');
         
         // console.log("DSI: Header found:", header);
         
