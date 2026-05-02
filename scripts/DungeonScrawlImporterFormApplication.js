@@ -94,7 +94,7 @@ export class DungeonScrawlImporterFormApplication extends FormApplication {
                     for (let i = 0; i + 1 < side.length; i = i + 1) {
                         wallData.push({
                             c:      [side[i][0] * gridFactor, side[i][1] * gridFactor, side[i + 1][0] * gridFactor, side[i + 1][1] * gridFactor],
-                            'door': isDoor,
+                            'door': isDoor ? 1 : 0,
                         })
                     }
                 })
@@ -121,7 +121,7 @@ export class DungeonScrawlImporterFormApplication extends FormApplication {
                                         coordinates[0],
                                         coordinates[1],
                                     ],
-                                    'door': isDoor
+                                    'door': isDoor ? 1 : 0
                                 })
                             }
                             lastPoint = coordinates
@@ -133,7 +133,7 @@ export class DungeonScrawlImporterFormApplication extends FormApplication {
                                 firstPoint[0],
                                 firstPoint[1],
                             ],
-                            'door': isDoor
+                            'door': isDoor ? 1 : 0
                         })
                     })
                 })
